@@ -19,7 +19,7 @@ package terraform
 			}
 		}
 
-		resource: {
+		resource?: {
 			for p in providers
 			for k, v in p.#resources {(k)?: [ID=string]: v & {
 				#name: string
@@ -34,7 +34,7 @@ package terraform
 			}}
 		}
 
-		data: {
+		data?: {
 			for p in providers
 			for k, v in p.#data_sources {(k)?: [ID=string]: v & {
 				#name: string

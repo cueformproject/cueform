@@ -4,7 +4,7 @@ language: {
 }
 deps: {
 	"github.com/cueformproject/cueform/terraform@v0": {
-		v:       "v0.0.0"
+		v:       "v0.0.1"
 		default: true
 	}
 }

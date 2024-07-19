@@ -1,5 +1,5 @@
-module: "cueform.org/terraform"
+module: "github.com/cueformproject/cueform/terraform"
 language: {
 	version: "v0.9.2"
 }
-source: kind: "dir"
+source: kind: "self"

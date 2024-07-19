@@ -1,17 +1,27 @@
 # CUE 🤝 Terraform
 
+## Example
+
+```shell
+$ cd ./example
+$ go run ../cmd/cueform-gen -d
+$ cue eval -c -e "infra" -f -o ./cueform.tf.json
+$ terraform init
+$ terraform plan
+```
+
 ## Generate provider schema
 
 1. Install `cueform-gen`:
     ```shell
-    go get -u github.com/cueformproject/cueform/cmd/cueform-gen
+    $ go install github.com/cueformproject/cueform/cmd/cueform-gen@latest
     ```
 2. Create a `cueform.gen.cue` file:
     ```cue
-    providers: {
+    providers: {providers: {
     	"hashicorp/aws": version:       "5.58.0"
     	"hashicorp/random": version:    "3.6.2"
-			"integrations/github": version: "6.2.3"
+    	"integrations/github": version: "6.2.3"
     }
     ```
 3. Execute `cueform-gen`:
